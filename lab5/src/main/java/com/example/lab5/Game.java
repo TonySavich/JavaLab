@@ -87,10 +87,10 @@ private void spawnEnemies() {
         Thread spawner = new Thread(() -> {
             try {
 
-                Random r = new Random();
+                while (true) {
+                      Random r = new Random();
                 double x = r.nextDouble() * WIDTH;
                 double y = r.nextDouble() * HEIGHT;
-                while (true) {
                     enemies.add(new Enemy(player, x, y));
                     Thread.sleep(1000);
                 }
